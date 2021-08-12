@@ -1,0 +1,16 @@
+D:\Документы\ДЗ\Homework2\Homework2\bin\Debug\net5.0\Homework2.exe
+D:\Документы\ДЗ\Homework2\Homework2\bin\Debug\net5.0\Homework2.deps.json
+D:\Документы\ДЗ\Homework2\Homework2\bin\Debug\net5.0\Homework2.runtimeconfig.json
+D:\Документы\ДЗ\Homework2\Homework2\bin\Debug\net5.0\Homework2.runtimeconfig.dev.json
+D:\Документы\ДЗ\Homework2\Homework2\bin\Debug\net5.0\Homework2.dll
+D:\Документы\ДЗ\Homework2\Homework2\bin\Debug\net5.0\ref\Homework2.dll
+D:\Документы\ДЗ\Homework2\Homework2\bin\Debug\net5.0\Homework2.pdb
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.csproj.AssemblyReference.cache
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.AssemblyInfoInputs.cache
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.AssemblyInfo.cs
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.csproj.CoreCompileInputs.cache
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.dll
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\ref\Homework2.dll
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.pdb
+D:\Документы\ДЗ\Homework2\Homework2\obj\Debug\net5.0\Homework2.genruntimeconfig.cache
