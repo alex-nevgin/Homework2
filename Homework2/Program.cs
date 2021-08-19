@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using static System.Console;
 
 namespace Homework2
 {
@@ -17,85 +18,67 @@ namespace Homework2
             */
             
             // Коды ошибок для вывода
-            string ErrCode1 = "Ошибка 1: рост не должен быть отрицательным";
-            string ErrCode2 = "Ощибка 2: балл по предмету должен быть неотрицательным и не превышать 10";
+            string errCode1 = "Ошибка 1: рост не должен быть отрицательным";
+            string errCode2 = "Ощибка 2: балл по предмету должен быть неотрицательным и не превышать 10"; 
 
-            // Ввод данных
-            Console.WriteLine("Введите Ваше имя: ");
-            string name = Console.ReadLine();
+            // Ввод данных (пользователь 1)
+            WriteLine("Введите Ваше имя: ");
+            string name = ReadLine();
 
-            Console.WriteLine("Введите Ваш возраст: ");
-            byte age = Convert.ToByte(Console.ReadLine()); /* получаем введенное значение, приводим к типу byte и
+            WriteLine("Введите Ваш возраст: ");
+            byte age = byte.Parse(ReadLine()); /* получаем введенное значение, приводим к типу byte и
                                                               присваиваем переменной  age */
 
-            Console.WriteLine("Введите Ваш рост: ");
-            double height = Convert.ToDouble(Console.ReadLine()); /* получаем введенное значение и присваиваем его строковой
+            WriteLine("Введите Ваш рост: ");
+            double height = double.Parse(ReadLine()); /* получаем введенное значение и присваиваем его строковой
                                                                      переменной  height */
-
-            // проверка роста
+            
+            
+            WriteLine("Введите Ваш балл по русскому языку: ");
+            byte rusMark = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем и
+                                                                       присваиваем его переменной RusMark*/
             
 
-
-            Console.WriteLine("Введите Ваш балл по русскому языку: ");
-                byte rus_mark = Convert.ToByte(Console.ReadLine()); /* получаем введенное значение, преобразуем и
-                                                                       присваиваем его переменной rus_mark*/
-                switch (rus_mark)
-                {
-                    case <= 0:
-                        Console.WriteLine(ErrCode2);
-                        break;
-                    case > 10:
-                        Console.WriteLine(ErrCode2);
-                        break;
-                }
-
-                Console.WriteLine("Введите Ваш балл по истории: ");
-                byte hist_mark = Convert.ToByte(Console.ReadLine()); /* получаем введенное значение, преобразуем 
-                                                                        и присваиваем его переменной  hist_mark */
+            WriteLine("Введите Ваш балл по истории: ");
+            byte histMark = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем 
+                                                                        и присваиваем его переменной  HistMark */
                 
-                Console.WriteLine("Введите Ваш балл по математике: ");
-                byte math_mark = Convert.ToByte(Console.ReadLine()); /* получаем введенное значение, преобразуем 
-                                                                        и присваиваем его переменной  math_mark */
+            WriteLine("Введите Ваш балл по математике: ");
+            byte mathMark = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем 
+                                                                        и присваиваем его переменной  MathMark */
+            
+            // Вычисляем средний балл
+            double averageMark = (double) (rusMark + histMark + mathMark) / 3;
+            WriteLine("Средний балл: " + averageMark);
 
-                // Проверка оценок
-                
-                
-                // Вычисляем средний балл
-                double average_mark = (double) (rus_mark + hist_mark + math_mark) / 3;
-                Console.WriteLine("Средний балл: " + average_mark);
+            // Вывод в консоль
+            WriteLine(name + age + height + histMark + mathMark + rusMark); // Неформатированный вывод
+            WriteLine("\n"); // разделение разных типов вывода (здесь и далее только для красоты и читаемости)
 
-                // Вывод в консоль
-                Console.WriteLine(name + age + height + hist_mark + math_mark +
-                                  rus_mark); // Неформатированный вывод
-                Console.WriteLine(
-                    "\n"); // разделение разных типов вывода (здесь и далее только для красоты и читаемости)
+            WriteLine(name + " " + age + " " + height + " " + rusMark + " " + histMark + " " +
+                                  mathMark); // Вывод с простым форматированием
+            WriteLine("\n");
 
-                Console.WriteLine(name + " " + age + " " + height + " " + hist_mark + " " + math_mark + " " +
-                                  rus_mark); // Вывод с простым форматированием
-                Console.WriteLine("\n");
-
-                Console.WriteLine("Имя: " + name + " Возраст: " + age + " Рост: " + height +
-                                  " Балл по русскому языку: " + rus_mark + " Балл по истории: " + hist_mark +
+            WriteLine("Имя: " + name + " Возраст: " + age + " Рост: " + height +
+                                  " Балл по русскому языку: " + rusMark + " Балл по истории: " + histMark +
                                   " Балл по математике: " +
-                                  math_mark); // Вывод без шаблона" Балл по русскому языку: "
-                Console.WriteLine("\n");
+                                  mathMark); // Вывод без шаблона" Балл по русскому языку: "
+            WriteLine("\n");
 
-                // Вывод по шаблону 
-                string simple_pattern =
+            // Вывод по шаблону 
+            string simplePattern =
                     "Имя: {0}, Возраст: {1}, Рост: {2}, Балл по русскому языку: {3}, Балл по истории: {4}, Балл по математике: {5}";
-                Console.WriteLine(simple_pattern, name, age, height, rus_mark, hist_mark, math_mark);
-                Console.WriteLine("\n");
+            WriteLine(simplePattern, name, age, height, rusMark, histMark, mathMark);
+            WriteLine("\n");
 
-                // Вывод по шаблону (интерполяция строк)
-                var interpol_pattern =
-                    $"Имя: {name}, Возраст: {age}, Рост: {height}, Балл по русскому языку: {rus_mark}, Балл по истории: {hist_mark}, Балл по математике: {math_mark}";
-                Console.WriteLine(interpol_pattern, name, age, height, rus_mark, hist_mark, math_mark);
-                Console.WriteLine("\n");
+            // Вывод по шаблону (интерполяция строк)
+            var interpolPattern = $"Имя: {name}, Возраст: {age}, Рост: {height}, Балл по русскому языку: {rusMark}, Балл по истории: {histMark}, Балл по математике: {mathMark}";
+            WriteLine(interpolPattern, name, age, height, rusMark, histMark, mathMark);
+            WriteLine("\n");
 
-                // Вывод по шаблону (c escape-последовательностями)
-                var escape_seq_pattern =
-                    $"Имя: {name} \nВозраст: {age} \nРост: {height} \nБалл по русскому языку: {rus_mark} \nБалл по истории: {hist_mark} \nБалл по математике: {math_mark}";
-                Console.WriteLine(escape_seq_pattern, name, age, height, rus_mark, hist_mark, math_mark);
+            // Вывод по шаблону (c escape-последовательностями)
+            var escapeSeqPattern = $"Имя: {name} \nВозраст: {age} \nРост: {height} \nБалл по русскому языку: {rusMark} \nБалл по истории: {histMark} \nБалл по математике: {mathMark}";
+            WriteLine(escapeSeqPattern, name, age, height, rusMark, histMark, mathMark);
 
         }
     }
