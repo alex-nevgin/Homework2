@@ -6,80 +6,145 @@ namespace Homework2
 {
     class Program
     {
+        /// <summary>
+        /// Приложение, принимающее данные трех пользователей (имя, возраст, рост, балл по русскому языку,
+        /// истории и математике), рассчитывающее средний балл и выводящее введенные и рассчитанные данные в консоль
+        /// по заданному шаблону.
+        /// </summary>
+        /// <param name="args"> Параметры точки входа (класса Main) </param>
         static void Main(string[] args)
         {
-            /* Создаем переменные
-            string name; // Имя
-            byte age; // Возраст
-            byte height; // Рост
-            ushort rus_mark; // балл по русскому
-            ushort hist_mark; // балл по истории
-            ushort math_mark; // балл по математике
-            */
             
-            // Коды ошибок для вывода
-            string errCode1 = "Ошибка 1: рост не должен быть отрицательным";
-            string errCode2 = "Ощибка 2: балл по предмету должен быть неотрицательным и не превышать 10"; 
-
+            // Подсказки для ввода данных
+            string nameHint = "Введите Ваше имя: ";
+            string ageHint = "Введите Ваш возраст: ";
+            string heightHint = "Введите Ваш рост: ";
+            string rusMarkHint = "Введите балл по русскому языку: ";
+            string histMarkHint = "Введите балл по истории: ";
+            string mathMarkHint = "Введите балл по математике: ";
+            
+            // Дополнительные переменные, необходимые для вывода
+            int consoleWindowLength = Console.WindowWidth;
+            int consoleWindowHeight = Console.WindowHeight;
+            
+            #region Данные пользователя 1
+            
             // Ввод данных (пользователь 1)
-            WriteLine("Введите Ваше имя: ");
-            string name = ReadLine();
-
-            WriteLine("Введите Ваш возраст: ");
-            byte age = byte.Parse(ReadLine()); /* получаем введенное значение, приводим к типу byte и
-                                                              присваиваем переменной  age */
-
-            WriteLine("Введите Ваш рост: ");
-            double height = double.Parse(ReadLine()); /* получаем введенное значение и присваиваем его строковой
-                                                                     переменной  height */
+            WriteLine(nameHint);
+            string name1 = ReadLine();
             
+            WriteLine(ageHint);
+            byte age1 = byte.Parse(ReadLine()); /* получаем введенное значение, приводим к типу byte и
+                                                   присваиваем переменной  age */
             
-            WriteLine("Введите Ваш балл по русскому языку: ");
-            byte rusMark = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем и
-                                                                       присваиваем его переменной RusMark*/
+            WriteLine(heightHint);
+            double height1 = double.Parse(ReadLine()); /* получаем введенное значение и присваиваем его строковой
+                                                          переменной  height */
             
-
-            WriteLine("Введите Ваш балл по истории: ");
-            byte histMark = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем 
-                                                                        и присваиваем его переменной  HistMark */
+            WriteLine(rusMarkHint);
+            byte rusMark1 = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем и
+                                                       присваиваем его переменной RusMark*/
+            
+            WriteLine(histMarkHint);
+            byte histMark1 = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем 
+                                                        и присваиваем его переменной  HistMark */
                 
-            WriteLine("Введите Ваш балл по математике: ");
-            byte mathMark = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем 
-                                                                        и присваиваем его переменной  MathMark */
+            WriteLine(mathMarkHint);
+            byte mathMark1 = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем 
+                                                        и присваиваем его переменной  MathMark */
             
             // Вычисляем средний балл
-            double averageMark = (double) (rusMark + histMark + mathMark) / 3;
-            WriteLine("Средний балл: " + averageMark);
+            double averageMark1 = (double) (rusMark1 + histMark1 + mathMark1) / 3;
 
             // Вывод в консоль
-            WriteLine(name + age + height + histMark + mathMark + rusMark); // Неформатированный вывод
+            string user1Output = $"{name1}{age1}{height1}{histMark1}{mathMark1}{rusMark1}{averageMark1}";
+            int user1OutputLength = user1Output.Length; // рассчитываем длину выводимой строки
+            int centerX = 
+            WriteLine(user1Output); // Неформатированный вывод
             WriteLine("\n"); // разделение разных типов вывода (здесь и далее только для красоты и читаемости)
+            
+            #endregion
 
-            WriteLine(name + " " + age + " " + height + " " + rusMark + " " + histMark + " " +
-                                  mathMark); // Вывод с простым форматированием
+            #region Данные пользователя 2
+            
+            /*
+            Принцип работы данной части кода аналогичен первой части. 
+            Описания переменных и работы кода см. в регионе 1.
+            Отличие данного участка - метод вывода данных (он описан в комментарии к соответствующем блоке кода.
+            */
+            
+            WriteLine(nameHint);
+            string name2 = ReadLine();
+            
+            WriteLine(ageHint);
+            byte age2 = byte.Parse(ReadLine()); 
+
+            WriteLine(heightHint);
+            double height2 = double.Parse(ReadLine()); 
+            
+            WriteLine(rusMarkHint);
+            byte rusMark2 = byte.Parse(ReadLine()); 
+            
+            WriteLine(histMarkHint);
+            byte histMark2 = byte.Parse(ReadLine()); 
+                
+            WriteLine(mathMarkHint);
+            byte mathMark2 = byte.Parse(ReadLine());
+            
+            double averageMark2 = (double) (rusMark2 + histMark2 + mathMark2) / 3;
+            
+            // Вывод с простым форматированием
+            WriteLine(name2 + " " + age2 + " " + height2 + " " + rusMark2 + " " + histMark2 + " " +
+                      mathMark2 + " " + averageMark2); // Вывод с простым форматированием
             WriteLine("\n");
-
-            WriteLine("Имя: " + name + " Возраст: " + age + " Рост: " + height +
+            
+            // Другой вариант форматированного вывода
+            /*
+             WriteLine("Имя: " + name + " Возраст: " + age + " Рост: " + height +
                                   " Балл по русскому языку: " + rusMark + " Балл по истории: " + histMark +
-                                  " Балл по математике: " +
-                                  mathMark); // Вывод без шаблона" Балл по русскому языку: "
-            WriteLine("\n");
+                                  " Балл по математике: " + mathMark);
+            WriteLine ("\n");
+             */
 
-            // Вывод по шаблону 
-            string simplePattern =
-                    "Имя: {0}, Возраст: {1}, Рост: {2}, Балл по русскому языку: {3}, Балл по истории: {4}, Балл по математике: {5}";
-            WriteLine(simplePattern, name, age, height, rusMark, histMark, mathMark);
-            WriteLine("\n");
+            #endregion
+
+            #region Данные пользователя 3
+            
+            /*
+            Принцип работы данной части кода аналогичен регионам 1 и 2. 
+            Описания переменных и работы кода см. в регионе 1.
+            Единственное отличие данного региона от двух первых - другой формат вывода данных.
+            */
+            
+            WriteLine(nameHint);
+            string name3 = ReadLine();
+            
+            WriteLine(ageHint);
+            byte age3 = byte.Parse(ReadLine()); 
+
+            WriteLine(heightHint);
+            double height3 = double.Parse(ReadLine()); 
+            
+            WriteLine(rusMarkHint);
+            byte rusMark3 = byte.Parse(ReadLine()); 
+            
+            WriteLine(histMarkHint);
+            byte histMark3 = byte.Parse(ReadLine()); 
+                
+            WriteLine(mathMarkHint);
+            byte mathMark3 = byte.Parse(ReadLine());
+            
+            double averageMark3 = (double) (rusMark3 + histMark3 + mathMark3) / 3;
 
             // Вывод по шаблону (интерполяция строк)
-            var interpolPattern = $"Имя: {name}, Возраст: {age}, Рост: {height}, Балл по русскому языку: {rusMark}, Балл по истории: {histMark}, Балл по математике: {mathMark}";
-            WriteLine(interpolPattern, name, age, height, rusMark, histMark, mathMark);
+            var interpolPattern = $"Имя: {name3}, Возраст: {age3}, Рост: {height3}, Балл по русскому языку: {rusMark3}, " +
+                                  $"Балл по истории: {histMark3}, Балл по математике: {mathMark3}, Средний балл: {averageMark3}";
+            WriteLine(interpolPattern, name3, age3, height3, rusMark3, histMark3, mathMark3, averageMark3);
             WriteLine("\n");
 
-            // Вывод по шаблону (c escape-последовательностями)
-            var escapeSeqPattern = $"Имя: {name} \nВозраст: {age} \nРост: {height} \nБалл по русскому языку: {rusMark} \nБалл по истории: {histMark} \nБалл по математике: {mathMark}";
-            WriteLine(escapeSeqPattern, name, age, height, rusMark, histMark, mathMark);
-
+            #endregion
+            
+            
         }
     }
 }
