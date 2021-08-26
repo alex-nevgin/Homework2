@@ -56,18 +56,7 @@ namespace Homework2
             // Вычисляем средний балл
             double averageMark1 = (double) (rusMark1 + histMark1 + mathMark1) / 3;
             
-            string user1Output = name1 + age1 + height1 + rusMark1 + histMark1 + mathMark1 + averageMark1;
-            int user1OutputLength = user1Output.Length;
-            int centerX = ((consoleWindowLength / 2) - (user1OutputLength / 2));
-            SetCursorPosition(centerX, 0);
-            WriteLine(user1Output);
-            
-            // int centerY = (consoleWindowHeight / 2);
-            
-            WriteLine(user1Output);
-            // Write("\n");
-            
-            // WriteLine("\n");
+            WriteLine("\n"); 
             
             #endregion
 
@@ -100,36 +89,16 @@ namespace Homework2
             
             double averageMark2 = (double) (rusMark2 + histMark2 + mathMark2) / 3;
             
-            // Вывод с простым форматированием
-            string user2Output = name2 + " " + age2 + " " + height2 + " " + rusMark2 + " " + histMark2 + " " +
-                                 mathMark2 + " " + averageMark2;
-            int user2OutputLength = user2Output.Length; // рассчитываем длину выводимой строки
-            //int centerX = ((consoleWindowLength / 2) - (user1OutputLength / 2));
-            //int centerY = (consoleWindowHeight / 2) - 1;
-            //SetCursorPosition(centerX, centerY);
-            //WriteLine(user2Output); // Неформатированный вывод
-            //WriteLine("\n"); // разделение разных типов вывода (здесь и далее только для красоты и читаемости)
-
-            // Другой вариант форматированного вывода
-            /*
-             WriteLine("Имя: " + name + " Возраст: " + age + " Рост: " + height +
-                                  " Балл по русскому языку: " + rusMark + " Балл по истории: " + histMark +
-                                  " Балл по математике: " + mathMark);
-            WriteLine ("\n");
-             */
-
-            WriteLine("\n");
-            
             #endregion
 
             #region Данные пользователя 3
-            
+
             /*
             Принцип работы данной части кода аналогичен регионам 1 и 2. 
             Описания переменных и работы кода см. в регионе 1.
             Единственное отличие данного региона от двух первых - другой формат вывода данных.
             */
-            
+
             WriteLine(nameHint);
             string name3 = ReadLine();
             
@@ -150,20 +119,40 @@ namespace Homework2
             
             double averageMark3 = (double) (rusMark3 + histMark3 + mathMark3) / 3;
 
-            // Вывод по шаблону (интерполяция строк)
-            /*var interpolPattern = $"Имя: {name3}, Возраст: {age3}, Рост: {height3}, Балл по русскому языку: {rusMark3}, " +
-                                  $"Балл по истории: {histMark3}, Балл по математике: {mathMark3}, Средний балл: {averageMark3}";
-            WriteLine(interpolPattern, name3, age3, height3, rusMark3, histMark3, mathMark3, averageMark3);*/
-            WriteLine("\n");
-
             #endregion
 
             #region Вывод данных
 
-            
-            
-            
-            
+            // Вывод данных первого пользователя
+
+            string user1Output = name1 + age1 + height1 + rusMark1 + histMark1 + mathMark1 + averageMark1;
+            int user1OutputLength = user1Output.Length;
+            int centerX = ((consoleWindowLength / 2) - (user1OutputLength / 2));
+            int centerY = (consoleWindowHeight / 2) - 1;
+            SetCursorPosition(centerX, centerY);
+            WriteLine(user1Output);
+            WriteLine("\n");
+
+            // Вывод данных второго пользователя
+            string user2Output = name2 + " " + age2 + " " + height2 + " " + rusMark2 + " " + histMark2 + " " +
+                                 mathMark2 + " " + averageMark2;
+            int user2OutputLength = user2Output.Length;
+            int centerX2 = ((consoleWindowLength / 2) - (user2OutputLength / 2));
+            int centerY2 = (consoleWindowHeight / 2) - 1;
+            SetCursorPosition(centerX2, centerY2);
+            WriteLine(user2Output);
+            WriteLine("\n");
+
+            // Вывод данных третьего пользователя
+            string user3Output = $"Имя: {name3}, Возраст: {age3}, Рост: {height3}, Балл по русскому языку: {rusMark3}, " +
+                                  $"Балл по истории: {histMark3}, Балл по математике: {mathMark3}, Средний балл: {averageMark3}";
+            int user3OutputLength = user3Output.Length;
+            int centerX3 = ((consoleWindowLength / 2) - (user3OutputLength / 2));
+            int centerY3 = (consoleWindowHeight / 2) - 1;
+            SetCursorPosition(centerX2, centerY2);
+            WriteLine(user3Output); 
+            WriteLine("\n");
+
 
             #endregion
         }
