@@ -52,16 +52,22 @@ namespace Homework2
             WriteLine(mathMarkHint);
             byte mathMark1 = byte.Parse(ReadLine()); /* получаем введенное значение, преобразуем 
                                                         и присваиваем его переменной  MathMark */
-            
+
             // Вычисляем средний балл
             double averageMark1 = (double) (rusMark1 + histMark1 + mathMark1) / 3;
-
-            // Вывод в консоль
-            string user1Output = $"{name1}{age1}{height1}{histMark1}{mathMark1}{rusMark1}{averageMark1}";
-            int user1OutputLength = user1Output.Length; // рассчитываем длину выводимой строки
-            int centerX = 
-            WriteLine(user1Output); // Неформатированный вывод
-            WriteLine("\n"); // разделение разных типов вывода (здесь и далее только для красоты и читаемости)
+            
+            string user1Output = name1 + age1 + height1 + rusMark1 + histMark1 + mathMark1 + averageMark1;
+            int user1OutputLength = user1Output.Length;
+            int centerX = ((consoleWindowLength / 2) - (user1OutputLength / 2));
+            SetCursorPosition(centerX, 0);
+            WriteLine(user1Output);
+            
+            // int centerY = (consoleWindowHeight / 2);
+            
+            WriteLine(user1Output);
+            // Write("\n");
+            
+            // WriteLine("\n");
             
             #endregion
 
@@ -72,6 +78,7 @@ namespace Homework2
             Описания переменных и работы кода см. в регионе 1.
             Отличие данного участка - метод вывода данных (он описан в комментарии к соответствующем блоке кода.
             */
+            
             
             WriteLine(nameHint);
             string name2 = ReadLine();
@@ -94,10 +101,15 @@ namespace Homework2
             double averageMark2 = (double) (rusMark2 + histMark2 + mathMark2) / 3;
             
             // Вывод с простым форматированием
-            WriteLine(name2 + " " + age2 + " " + height2 + " " + rusMark2 + " " + histMark2 + " " +
-                      mathMark2 + " " + averageMark2); // Вывод с простым форматированием
-            WriteLine("\n");
-            
+            string user2Output = name2 + " " + age2 + " " + height2 + " " + rusMark2 + " " + histMark2 + " " +
+                                 mathMark2 + " " + averageMark2;
+            int user2OutputLength = user2Output.Length; // рассчитываем длину выводимой строки
+            //int centerX = ((consoleWindowLength / 2) - (user1OutputLength / 2));
+            //int centerY = (consoleWindowHeight / 2) - 1;
+            //SetCursorPosition(centerX, centerY);
+            //WriteLine(user2Output); // Неформатированный вывод
+            //WriteLine("\n"); // разделение разных типов вывода (здесь и далее только для красоты и читаемости)
+
             // Другой вариант форматированного вывода
             /*
              WriteLine("Имя: " + name + " Возраст: " + age + " Рост: " + height +
@@ -106,6 +118,8 @@ namespace Homework2
             WriteLine ("\n");
              */
 
+            WriteLine("\n");
+            
             #endregion
 
             #region Данные пользователя 3
@@ -137,14 +151,21 @@ namespace Homework2
             double averageMark3 = (double) (rusMark3 + histMark3 + mathMark3) / 3;
 
             // Вывод по шаблону (интерполяция строк)
-            var interpolPattern = $"Имя: {name3}, Возраст: {age3}, Рост: {height3}, Балл по русскому языку: {rusMark3}, " +
+            /*var interpolPattern = $"Имя: {name3}, Возраст: {age3}, Рост: {height3}, Балл по русскому языку: {rusMark3}, " +
                                   $"Балл по истории: {histMark3}, Балл по математике: {mathMark3}, Средний балл: {averageMark3}";
-            WriteLine(interpolPattern, name3, age3, height3, rusMark3, histMark3, mathMark3, averageMark3);
+            WriteLine(interpolPattern, name3, age3, height3, rusMark3, histMark3, mathMark3, averageMark3);*/
             WriteLine("\n");
 
             #endregion
+
+            #region Вывод данных
+
             
             
+            
+            
+
+            #endregion
         }
     }
 }
