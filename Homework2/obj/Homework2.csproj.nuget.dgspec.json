@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\Homework2\\Homework2\\Homework2.csproj": {}
+    "D:\\Документы\\Repos\\alex-nevgin\\Homework2\\Homework2\\Homework2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\Homework2\\Homework2\\Homework2.csproj": {
+    "D:\\Документы\\Repos\\alex-nevgin\\Homework2\\Homework2\\Homework2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Homework2\\Homework2\\Homework2.csproj",
+        "projectUniqueName": "D:\\Документы\\Repos\\alex-nevgin\\Homework2\\Homework2\\Homework2.csproj",
         "projectName": "Homework2",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\Homework2\\Homework2\\Homework2.csproj",
+        "projectPath": "D:\\Документы\\Repos\\alex-nevgin\\Homework2\\Homework2\\Homework2.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\Homework2\\Homework2\\obj\\",
+        "outputPath": "D:\\Документы\\Repos\\alex-nevgin\\Homework2\\Homework2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

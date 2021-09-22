@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.Design;
 using static System.Console;
 
 namespace Homework2
@@ -8,8 +7,8 @@ namespace Homework2
     {
         /// <summary>
         /// Приложение, принимающее данные трех пользователей (имя, возраст, рост, балл по русскому языку,
-        /// истории и математике), рассчитывающее средний балл и выводящее введенные и рассчитанные данные в консоль
-        /// по заданному шаблону.
+        /// истории и математике), рассчитывающее средний балл и выводящее введенные и рассчитанные данные
+        /// в консоль по заданному шаблону.
         /// </summary>
         /// <param name="args"> Параметры точки входа (класса Main) </param>
         static void Main(string[] args)
@@ -56,7 +55,7 @@ namespace Homework2
             // Вычисляем средний балл
             double averageMark1 = (double) (rusMark1 + histMark1 + mathMark1) / 3;
             
-            WriteLine("\n"); 
+            WriteLine("\n");
             
             #endregion
 
@@ -152,7 +151,6 @@ namespace Homework2
             SetCursorPosition(centerX2, centerY2);
             WriteLine(user3Output); 
             WriteLine("\n");
-
 
             #endregion
         }
